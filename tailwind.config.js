@@ -1,12 +1,23 @@
-// tailwind.config.js
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  mode: 'jit',
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    // classes that are generated dynamically, e.g. `rounded-${size}` and must
+    // be kept
+    safeList: [],
+    content: [
+      './index.html',
+      './src/**/*.{vue,js,ts}',
+      // etc.
+    ],
+  },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 }
