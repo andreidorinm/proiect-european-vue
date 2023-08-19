@@ -45,7 +45,7 @@ export default defineComponent({
   data() {
     return {
       yearData,
-      selectedYear: Number = 2010  // Stores the selected year from dropdown
+      selectedYear: 2010  // Stores the selected year from dropdown
     };
   },
   methods: {
