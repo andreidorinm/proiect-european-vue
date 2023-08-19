@@ -29,4 +29,6 @@ if (import.meta.hot) {
 
 app.use(router)
 
+
 app.mount('#app')
+
