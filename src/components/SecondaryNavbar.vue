@@ -23,7 +23,11 @@
             </a>
           </div>
         </div>
-        <a :href="`/${selectedYear || ''}/link1`" class="font-medium ..." aria-current="page">Landing</a>
+        <button :disabled="!selectedYear || selectedYear === 'Alege o perioada'"
+          class="font-medium text-white bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:hover:bg-gray-300">
+          Landing
+        </button>
+
         <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
           href="#">Account</a>
         <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
