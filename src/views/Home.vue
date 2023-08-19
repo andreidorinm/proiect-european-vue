@@ -1,5 +1,9 @@
 <template>
-  <SecondaryNavbar/>
+    <SecondaryNavbar/>
+  <div class="flex items-center justify-start p-4">
+      <year-carousel @yearChanged="updateYear"></year-carousel>
+      <dynamic-links :currentYear="currentYear"></dynamic-links>
+    </div>
   <main>
     <div class="px-4 py-6 sm:px-0">
       <div
@@ -21,13 +25,28 @@
 <script>
 // Import the GMapComponent
 import GoogleMapComponent from "../components/GoogleMapComponent.vue";
+import YearCarousel from "../components/YearCarousel.vue";
+import DynamicLinks from "../components/DynamicLinks.vue";
 import SecondaryNavbar from "../components/SecondaryNavbar.vue";
+
 
 export default {
   components: {
     GoogleMapComponent, // Register the component,
+    YearCarousel,
+    DynamicLinks,
     SecondaryNavbar
   },
+  data() {
+    return {
+      currentYear: new Date().getFullYear()
+    };
+  },
+  methods: {
+    updateYear(newYear) {
+      this.currentYear = newYear;
+    }
+  }
 };
 
 </script>
