@@ -1,6 +1,6 @@
 <template>
     <SecondaryNavbar/>
-  <div class="flex items-center justify-start p-4">
+    <div class="flex items-center justify-start p-4">
       <year-carousel @yearChanged="updateYear"></year-carousel>
       <dynamic-links :currentYear="currentYear"></dynamic-links>
     </div>
