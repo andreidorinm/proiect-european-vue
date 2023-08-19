@@ -1,4 +1,5 @@
 <template>
+  <SecondaryNavbar/>
   <main>
     <div class="px-4 py-6 sm:px-0">
       <div
@@ -20,10 +21,12 @@
 <script>
 // Import the GMapComponent
 import GoogleMapComponent from "../components/GoogleMapComponent.vue";
+import SecondaryNavbar from "../components/SecondaryNavbar.vue";
 
 export default {
   components: {
-    GoogleMapComponent, // Register the component
+    GoogleMapComponent, // Register the component,
+    SecondaryNavbar
   },
 };
 
