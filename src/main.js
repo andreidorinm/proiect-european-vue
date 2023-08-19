@@ -1,15 +1,16 @@
 import { createApp } from 'vue'
-import './assets/main.css'
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
+import './assets/main.css'
 
-let app = createApp(App)
-let router = createRouter({
+// Create Router Instance
+const router = createRouter({
   history: createWebHistory(),
   routes: import.meta.hot ? [] : routes,
 })
 
+// Handle Hot Module Replacement
 if (import.meta.hot) {
   let removeRoutes = []
 
@@ -27,8 +28,5 @@ if (import.meta.hot) {
   })
 }
 
-app.use(router)
-
-
-app.mount('#app')
-
+// Create and Mount Vue App
+createApp(App).use(router).mount('#app')
