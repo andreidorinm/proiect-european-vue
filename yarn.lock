@@ -1274,7 +1274,7 @@ vue-router@^4.2.4:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue3-google-map@^0.16.0:
+vue3-google-map@0.16.0:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/vue3-google-map/-/vue3-google-map-0.16.0.tgz#b3a8ae368ba47b916bebc9b3ecd46f49a68843e7"
   integrity sha512-9I5g3ZjfSHbf+1jjyZicmbTdTuMT03zO5gwmKLfIbEvcde4OVJT6AI6iQXSXH0HJpSrEd78g5VTZ9mqQ+fOAkA==
