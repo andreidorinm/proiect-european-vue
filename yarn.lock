@@ -146,7 +146,7 @@
   dependencies:
     fast-deep-equal "^3.1.3"
 
-"@googlemaps/markerclusterer@^2.4.0":
+"@googlemaps/markerclusterer@^2.0.6":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@googlemaps/markerclusterer/-/markerclusterer-2.4.0.tgz#52ede8a186f264468d7100b4c27d2a866956af6f"
   integrity sha512-yjHrqaaYMzclbPERoCP/6r2w+wJfTCW/+Wblr7eJ4dyQcRFeOxZ8bsdoqvsyj1UbgNt91ly2aiww8h0uDOD6zw==
@@ -1274,13 +1274,13 @@ vue-router@^4.2.4:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue3-google-map@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/vue3-google-map/-/vue3-google-map-0.17.0.tgz#ee1c0655a910fa0fd630c6285134d12b25cec753"
-  integrity sha512-XNJcuhnOVfb54cvOsxr3hmrcxtwnvXvt8c1CrdwCfl51jYBhBCFANFu74Ta4+WMRLXIBL0xoXqk9GZSzWruosA==
+vue3-google-map@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/vue3-google-map/-/vue3-google-map-0.16.0.tgz#b3a8ae368ba47b916bebc9b3ecd46f49a68843e7"
+  integrity sha512-9I5g3ZjfSHbf+1jjyZicmbTdTuMT03zO5gwmKLfIbEvcde4OVJT6AI6iQXSXH0HJpSrEd78g5VTZ9mqQ+fOAkA==
   dependencies:
     "@googlemaps/js-api-loader" "^1.12.11"
-    "@googlemaps/markerclusterer" "^2.4.0"
+    "@googlemaps/markerclusterer" "^2.0.6"
     fast-deep-equal "^3.1.3"
     vite-plugin-css-injected-by-js "^3.2.1"
 
