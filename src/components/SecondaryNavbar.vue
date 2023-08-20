@@ -21,7 +21,7 @@
                aria-labelledby="hs-dropdown-default">
             
             <!-- Iterative Links for Dropdown -->
-            <a v-for="data in yearData" :key="data.year"
+            <a v-for="data in imagesData" :key="data.year"
                class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                @click="selectYear(data.year)">
               {{ data.year }}
@@ -46,14 +46,14 @@
 
 
 <script>
-import yearData from '../year.json';  // Adjust the path accordingly
+import imagesData from '../../public/data/images.json';  // Adjust the path accordingly
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: 'SecondaryNavbar',
   data() {
     return {
-      yearData,
+      imagesData,
       selectedYear: 2010  // Stores the selected year from dropdown
     };
   },
