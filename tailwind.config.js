@@ -23,5 +23,9 @@ module.exports = {
   },
   plugins: [
     require('preline/plugin'),
+    require('flowbite/plugin')
   ],
+  content: [
+    "./node_modules/flowbite/**/*.js"
+  ]
 }
