@@ -33,9 +33,9 @@
         <!-- Navbar Links -->
         <div class="flex flex-wrap space-x-3 sm:space-x-5 sm:mt-0">
           <a :href="`/${selectedYear || ''}/link1`" class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300">Landing</a>
-          <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Account</a>
-          <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Work</a>
-          <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Blog</a>
+          <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Detalii proiect</a>
+          <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Mobilitati</a>
+          <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Galerie</a>
         </div>
 
       </div>
