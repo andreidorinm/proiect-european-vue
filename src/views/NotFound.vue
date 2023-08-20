@@ -2,7 +2,7 @@
 <html class="h-full">
   <body class="flex h-full">
     <div class="max-w-[50rem] flex flex-col mx-auto w-full h-full">
-      <header class="mb-auto flex justify-center z-50 w-full py-4">
+      <header class="mb-auto flex justify-center z-50 w-full pt-28 py-6">
         <nav class="px-4 sm:px-6 lg:px-8" aria-label="Global">
           <a class="flex-none text-xl font-semibold sm:text-3xl dark:text-white" href="#" aria-label="Brand">Scoala Merano</a>
         </nav>
@@ -23,9 +23,9 @@
         </div>
       </div>
 
-      <footer class="mt-auto text-center py-5">
+      <footer class="mt-auto text-center py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p class="text-sm text-gray-500">© All Rights Reserved. 2022.</p>
+         
         </div>
       </footer>
     </div>
