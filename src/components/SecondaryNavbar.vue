@@ -16,7 +16,7 @@
           </button>
           
           <!-- Dropdown Menu -->
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700" 
+          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 " 
                aria-labelledby="hs-dropdown-default">
             
             <!-- Iterative Links for Dropdown -->
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Navbar Links -->
-        <div class="flex flex-wrap space-x-3 sm:space-x-5 mt-3 sm:mt-0">
+        <div class="flex flex-wrap space-x-3 sm:space-x-5 sm:mt-0">
           <a :href="`/${selectedYear || ''}/link1`" class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300">Landing</a>
           <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Account</a>
           <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300" href="#">Work</a>

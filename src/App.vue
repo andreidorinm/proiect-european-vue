@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="bg-gray-800">
+    <nav class="bg-gray-800 sticky top-0 z-50">
       <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
@@ -236,12 +236,17 @@
       <router-view />
     </div>
   </div>
+  <Footer/>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import Footer from './components/Footer.vue';
 
 export default defineComponent({
+  components: {
+    Footer
+  },
   data: () => ({
     showMenu: false,
     showProfileMenu: false,
