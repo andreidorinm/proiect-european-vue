@@ -46,7 +46,7 @@
 
 
 <script>
-import imagesData from '../../public/data/images.json';  // Adjust the path accordingly
+import imagesData from '/src/data/images.json';
 import { defineComponent } from "vue";
 
 export default defineComponent({
