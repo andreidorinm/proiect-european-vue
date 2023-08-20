@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import yearData from '../year.json';
+import { defineComponent } from 'vue';
 import NotFound from './NotFound.vue';
+import yearData from '../year.json'
 
-export default {
+export default defineComponent({
   components: {
-    NotFound,
     NotFound
 },
   props: {
@@ -40,5 +40,5 @@ export default {
       return yearData.find(data => data.year === this.currentYear)?.data;
     }
   }
-}
+})
 </script>

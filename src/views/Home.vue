@@ -1,38 +1,31 @@
 <template>
-    <SecondaryNavbar/>
+<div class="mb-6">
+  <SecondaryNavbar/>
+</div>
+<HeroSection/>
 
-  <main>
-    <div class="px-4 py-6 sm:px-0">
-      <div
-        class="p-4 text-center text-gray-400 border-4 border-gray-200 border-dashed rounded-lg  h-96"
-      >
-        <!-- Embed the GMapComponent -->
-        <GoogleMapComponent />
-        
-        Here goes your content. You can also go to the
-        <router-link
-          to="/about"
-          class="text-indigo-600 underline hover:text-indigo-500"
-        >About page</router-link>.
+  <main class="mt-4 bg-gray-50 dark:bg-gray-900">
+      <div class="px-4 py-6 sm:px-0">
+          <div class="p-4 text-center text-gray-400 border-4 border-gray-200 border-dashed rounded-lg h-full">
+              <GoogleMapComponent />
+          </div>
       </div>
-    </div>
   </main>
 </template>
 
+
 <script>
-// Import the GMapComponent
 import GoogleMapComponent from "../components/GoogleMapComponent.vue";
-import YearCarousel from "../components/YearCarousel.vue";
-import DynamicLinks from "../components/DynamicLinks.vue";
 import SecondaryNavbar from "../components/SecondaryNavbar.vue";
+import HeroSection from "../components/HeroSection.vue";
+import { defineComponent } from "vue";
 
 
-export default {
+export default defineComponent({
   components: {
-    GoogleMapComponent, // Register the component,
-    YearCarousel,
-    DynamicLinks,
-    SecondaryNavbar
+    GoogleMapComponent, 
+    SecondaryNavbar,
+    HeroSection
   },
   data() {
     return {
@@ -44,6 +37,6 @@ export default {
       this.currentYear = newYear;
     }
   }
-};
+});
 
 </script>
