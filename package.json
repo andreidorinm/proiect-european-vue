@@ -22,8 +22,5 @@
   },
   "resolutions": {
     "postcss": "^8.4.27"
-  },
-  "engines": {
-    "node": ">=18.16.0"
   }
 }
