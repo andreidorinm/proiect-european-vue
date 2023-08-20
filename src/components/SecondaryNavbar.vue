@@ -1,5 +1,6 @@
 <template>
-  <header class="flex flex-col sm:flex-row items-center justify-between py-2 bg-gray-100 dark:bg-gray-850 border-b border-gray-200 dark:border-gray-750 shadow-md mb-2">
+   <header class="bg-white shadow">
+      <div class="max-w-screen-xl px-4 py-6 mx-auto sm:px-6 lg:px-8">
     <nav class="w-full px-4" aria-label="Global">
       <div class="flex flex-wrap items-center gap-3">
 
@@ -10,7 +11,7 @@
             {{ selectedYear }}
             
             <!-- Dropdown Arrow Icon -->
-            <svg class="hs-dropdown-open:rotate-180 w-4 h-4 text-gray-600 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="hs-dropdown-open:rotate-180 w-4 h-4 text-gray-00 dark:text-gray-400" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 5L8 11L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </button>
@@ -39,6 +40,7 @@
 
       </div>
     </nav>
+    </div>
   </header>
 </template>
 
