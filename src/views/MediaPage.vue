@@ -34,7 +34,7 @@
 <script>
 import { defineComponent } from 'vue';
 import NotFound from './NotFound.vue';
-import imagesData from '../../public/data/images.json'
+import imagesData from '/src/data/images.json';
 
 export default defineComponent({
   components: {
