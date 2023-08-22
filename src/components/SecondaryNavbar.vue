@@ -6,10 +6,9 @@
 
           <!-- Dropdown -->
           <div class="hs-dropdown relative">
-            <button id="hs-dropdown-default" type="button"
+            <button @click="toggleDropdown" id="hs-dropdown-default" type="button"
               class="hs-dropdown-toggle py-2 px-4 flex justify-center items-center gap-2 rounded-md border bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 dark:focus:ring-offset-gray-750">
               {{ selectedYear }}
-
               <!-- Dropdown Arrow Icon -->
               <svg class="hs-dropdown-open:rotate-180 w-4 h-4 text-gray-00 dark:text-gray-400" width="16" height="16"
                 viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +17,7 @@
             </button>
 
             <!-- Dropdown Menu -->
-            <div
+            <div :class="{ 'opacity-100': dropdownOpen, 'opacity-0': !dropdownOpen }"
               class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 "
               aria-labelledby="hs-dropdown-default">
 
@@ -64,6 +63,8 @@ export default defineComponent({
 
     const localYear = ref(selectedYear.value);  // defining localYear
 
+    const dropdownOpen = ref(false)
+
     watch(selectedYear, (newValue, oldValue) => {
       // If there's a change in value, update localYear
       if (newValue !== oldValue) {
@@ -71,8 +72,12 @@ export default defineComponent({
       }
     });
 
+    function toggleDropdown() {
+      dropdownOpen.value = !dropdownOpen.value;
+    }
+
     return {
-      selectedYear, updateSelectedYear, localYear
+      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown
     };
   },
 
