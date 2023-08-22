@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SecondaryNavbar/>
+    <SecondaryNavbar />
     <div v-if="yearEvents">
       <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div v-for="event in yearEvents" :key="event.title"
@@ -70,7 +70,10 @@ export default defineComponent({
 
     async function fetchYearData() {
       try {
-        const response = await fetch('/data/images.json');
+        console.log('Fetching data...');
+        const response = await fetch(`${import.meta.env.BASE_URL}data/images.json`);
+        console.log('Response:', response);
+
         if (response.ok) {
           imagesData.value = await response.json();
         } else {

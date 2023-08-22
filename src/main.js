@@ -33,7 +33,10 @@ const globalData = ref(null);
 
 async function fetchData() {
   try {
-    const response = await fetch('/data/images.json');
+    console.log('Fetching data...');
+    const response = await fetch(`${import.meta.env.BASE_URL}data/images.json`);
+    console.log('Response:', response);
+    
     if (response.ok) {
       globalData.value = await response.json();
     } else {
