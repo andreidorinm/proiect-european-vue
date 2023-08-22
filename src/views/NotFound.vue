@@ -4,7 +4,7 @@
     <div class="max-w-[50rem] flex flex-col mx-auto w-full h-full">
       <header class="mb-auto flex justify-center z-50 w-full pt-28 py-6">
         <nav class="px-4 sm:px-6 lg:px-8" aria-label="Global">
-          <a class="flex-none text-xl font-semibold sm:text-3xl dark:text-white" href="#" aria-label="Brand">Scoala Merano</a>
+          <a class="flex-none text-xl font-semibold sm:text-3xl dark:text-white" href="#" aria-label="Brand">Scoala</a>
         </nav>
       </header>
 
