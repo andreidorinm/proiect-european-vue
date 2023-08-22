@@ -46,9 +46,8 @@ async function fetchData() {
 
 fetchData();
 
-// Provide the data to the whole app so any component can access it
+const app = createApp(App)
+
 app.provide('globalData', globalData);
 
-
-// Create and Mount Vue App
-createApp(App).use(router).mount('#app')
+app.use(router).mount('#app')
