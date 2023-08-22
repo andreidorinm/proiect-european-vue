@@ -28,5 +28,27 @@ if (import.meta.hot) {
   })
 }
 
+// Create a reactive object to hold the data
+const globalData = ref(null);
+
+async function fetchData() {
+  try {
+    const response = await fetch('/data/images.json');
+    if (response.ok) {
+      globalData.value = await response.json();
+    } else {
+      console.error('Failed to fetch the JSON data');
+    }
+  } catch (error) {
+    console.error('Error fetching JSON data:', error);
+  }
+}
+
+fetchData();
+
+// Provide the data to the whole app so any component can access it
+app.provide('globalData', globalData);
+
+
 // Create and Mount Vue App
 createApp(App).use(router).mount('#app')
