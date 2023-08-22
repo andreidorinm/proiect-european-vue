@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, ref } from 'vue'
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -28,5 +28,29 @@ if (import.meta.hot) {
   })
 }
 
-// Create and Mount Vue App
-createApp(App).use(router).mount('#app')
+// Create a reactive object to hold the data
+const globalData = ref(null);
+
+async function fetchData() {
+  try {
+    console.log('Fetching data...');
+    const response = await fetch(`${import.meta.env.BASE_URL}data/images.json`);
+    console.log('Response:', response);
+    
+    if (response.ok) {
+      globalData.value = await response.json();
+    } else {
+      console.error('Failed to fetch the JSON data');
+    }
+  } catch (error) {
+    console.error('Error fetching JSON data:', error);
+  }
+}
+
+fetchData();
+
+const app = createApp(App)
+
+app.provide('globalData', globalData);
+
+app.use(router).mount('#app')

@@ -59,22 +59,22 @@ export default defineComponent({
   name: 'SecondaryNavbar',
 
   setup() {
-  const selectedYear = inject('selectedYear');
-  const updateSelectedYear = inject('updateSelectedYear');
-  
-  const localYear = ref(selectedYear.value);  // defining localYear
-  
-  watch(selectedYear, (newValue, oldValue) => {
-    // If there's a change in value, update localYear
-    if (newValue !== oldValue) {
-      localYear.value = newValue;
-    }
-  });
+    const selectedYear = inject('selectedYear');
+    const updateSelectedYear = inject('updateSelectedYear');
 
-  return {
-    selectedYear, updateSelectedYear, localYear
-  };
-},
+    const localYear = ref(selectedYear.value);  // defining localYear
+
+    watch(selectedYear, (newValue, oldValue) => {
+      // If there's a change in value, update localYear
+      if (newValue !== oldValue) {
+        localYear.value = newValue;
+      }
+    });
+
+    return {
+      selectedYear, updateSelectedYear, localYear
+    };
+  },
 
 
 
@@ -87,7 +87,10 @@ export default defineComponent({
   methods: {
     async fetchImagesData() {
       try {
-        const response = await fetch('/data/images.json');
+        console.log('Fetching data...');
+        const response = await fetch(`${import.meta.env.BASE_URL}data/images.json`);
+        console.log('Response:', response);
+
 
         if (!response.ok) {
           throw new Error("Failed to fetch images data.");
