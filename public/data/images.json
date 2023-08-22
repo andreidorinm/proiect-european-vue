@@ -7,11 +7,11 @@
         "description": "Description for Event A",
         "images": [
           {
-            "src": "1.jpg",
+            "src": "/img/1.jpg",
             "alt": "Description for 1.jpg"
           },
           {
-            "src": "2.jpg",
+            "src": "/img/2.jpg",
             "alt": "Description for 2.jpg"
           }
         ]
@@ -21,11 +21,11 @@
         "description": "Description for Event B",
         "images": [
           {
-            "src": "3.jpg",
+            "src": "/img/3.jpg",
             "alt": "Description for 3.jpg"
           },
           {
-            "src": "4.jpg",
+            "src": "/img/4.jpg",
             "alt": "Description for 4.jpg"
           }
         ]
@@ -40,11 +40,11 @@
         "description": "Description for Event C",
         "images": [
           {
-            "src": "5.jpg",
+            "src": "/img/5.jpg",
             "alt": "Description for 5.jpg"
           },
           {
-            "src": "6.jpg",
+            "src": "/img/6.jpg",
             "alt": "Description for 6.jpg"
           }
         ]
@@ -54,11 +54,11 @@
         "description": "Description for Event D",
         "images": [
           {
-            "src": "7.jpg",
+            "src": "/img/7.jpg",
             "alt": "Description for 7.jpg"
           },
           {
-            "src": "8.jpg",
+            "src": "/img/8.jpg",
             "alt": "Description for 8.jpg"
           }
         ]
@@ -73,11 +73,11 @@
         "description": "Description for Event E",
         "images": [
           {
-            "src": "9.jpg",
+            "src": "/img/9.jpg",
             "alt": "Description for 9.jpg"
           },
           {
-            "src": "10.jpg",
+            "src": "/img/10.jpg",
             "alt": "Description for 10.jpg"
           }
         ]
@@ -87,11 +87,11 @@
         "description": "Description for Event F",
         "images": [
           {
-            "src": "11.jpg",
+            "src": "/img/11.jpg",
             "alt": "Description for 11.jpg"
           },
           {
-            "src": "12.jpg",
+            "src": "/img/12.jpg",
             "alt": "Description for 12.jpg"
           }
         ]
@@ -106,11 +106,11 @@
         "description": "Description for Event G",
         "images": [
           {
-            "src": "13.jpg",
+            "src": "/img/13.jpg",
             "alt": "Description for 13.jpg"
           },
           {
-            "src": "14.jpg",
+            "src": "/img/14.jpg",
             "alt": "Description for 14.jpg"
           }
         ]
@@ -120,11 +120,11 @@
         "description": "Description for Event H",
         "images": [
           {
-            "src": "15.jpg",
+            "src": "/img/15.jpg",
             "alt": "Description for 15.jpg"
           },
           {
-            "src": "16.jpg",
+            "src": "/img/16.jpg",
             "alt": "Description for 16.jpg"
           }
         ]
@@ -139,11 +139,11 @@
         "description": "Description for Event I",
         "images": [
           {
-            "src": "17.jpg",
+            "src": "/img/17.jpg",
             "alt": "Description for 17.jpg"
           },
           {
-            "src": "18.jpg",
+            "src": "/img/18.jpg",
             "alt": "Description for 18.jpg"
           }
         ]
@@ -153,11 +153,11 @@
         "description": "Description for Event J",
         "images": [
           {
-            "src": "19.jpg",
+            "src": "/img/19.jpg",
             "alt": "Description for 19.jpg"
           },
           {
-            "src": "20.jpg",
+            "src": "/img/20.jpg",
             "alt": "Description for 20.jpg"
           }
         ]
