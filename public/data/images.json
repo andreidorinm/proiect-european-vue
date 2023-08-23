@@ -7,12 +7,12 @@
         "description": "Description for Event A",
         "images": [
           {
-            "src": "/img/1.jpg",
-            "alt": "Description for 1.jpg"
+            "src": "https://i.ibb.co/vvTBZ4t/20.webp",
+            "alt": "Description for 20.webp"
           },
           {
-            "src": "/img/2.jpg",
-            "alt": "Description for 2.jpg"
+            "src": "https://i.ibb.co/GMR5bBx/19.webp",
+            "alt": "Description for 19.webp"
           }
         ]
       },
@@ -21,12 +21,12 @@
         "description": "Description for Event B",
         "images": [
           {
-            "src": "/img/3.jpg",
-            "alt": "Description for 3.jpg"
+            "src": "https://i.ibb.co/g9tqfWD/18.webp",
+            "alt": "Description for 18.webp"
           },
           {
-            "src": "/img/4.jpg",
-            "alt": "Description for 4.jpg"
+            "src": "https://i.ibb.co/LnLMMtB/17.webp",
+            "alt": "Description for 17.webp"
           }
         ]
       }
@@ -40,12 +40,12 @@
         "description": "Description for Event C",
         "images": [
           {
-            "src": "/img/5.jpg",
-            "alt": "Description for 5.jpg"
+            "src": "https://i.ibb.co/ZVB8cmc/16.webp",
+            "alt": "Description for 16.webp"
           },
           {
-            "src": "/img/6.jpg",
-            "alt": "Description for 6.jpg"
+            "src": "https://i.ibb.co/WxFHfrn/15.webp",
+            "alt": "Description for 15.webp"
           }
         ]
       },
@@ -54,12 +54,12 @@
         "description": "Description for Event D",
         "images": [
           {
-            "src": "/img/7.jpg",
-            "alt": "Description for 7.jpg"
+            "src": "https://i.ibb.co/jgpVHHv/14.webp",
+            "alt": "Description for 14.webp"
           },
           {
-            "src": "/img/8.jpg",
-            "alt": "Description for 8.jpg"
+            "src": "https://i.ibb.co/6rx951D/13.webp",
+            "alt": "Description for 13.webp"
           }
         ]
       }
@@ -73,12 +73,12 @@
         "description": "Description for Event E",
         "images": [
           {
-            "src": "/img/9.jpg",
-            "alt": "Description for 9.jpg"
+            "src": "https://i.ibb.co/zRb72wT/12.webp",
+            "alt": "Description for 12.webp"
           },
           {
-            "src": "/img/10.jpg",
-            "alt": "Description for 10.jpg"
+            "src": "https://i.ibb.co/k2C3JT3/11.webp",
+            "alt": "Description for 11.webp"
           }
         ]
       },
@@ -87,12 +87,12 @@
         "description": "Description for Event F",
         "images": [
           {
-            "src": "/img/11.jpg",
-            "alt": "Description for 11.jpg"
+            "src": "https://i.ibb.co/KDD227f/10.webp",
+            "alt": "Description for 10.webp"
           },
           {
-            "src": "/img/12.jpg",
-            "alt": "Description for 12.jpg"
+            "src": "https://i.ibb.co/7G2R1n3/9.webp",
+            "alt": "Description for 9.webp"
           }
         ]
       }
@@ -106,12 +106,12 @@
         "description": "Description for Event G",
         "images": [
           {
-            "src": "/img/13.jpg",
-            "alt": "Description for 13.jpg"
+            "src": "https://i.ibb.co/F7ynnKn/8.webp",
+            "alt": "Description for 8.webp"
           },
           {
-            "src": "/img/14.jpg",
-            "alt": "Description for 14.jpg"
+            "src": "https://i.ibb.co/3mrJCdh/7.webp",
+            "alt": "Description for 7.webp"
           }
         ]
       },
@@ -120,12 +120,12 @@
         "description": "Description for Event H",
         "images": [
           {
-            "src": "/img/15.jpg",
-            "alt": "Description for 15.jpg"
+            "src": "https://i.ibb.co/hDSt4LQ/6.webp",
+            "alt": "Description for 6.webp"
           },
           {
-            "src": "/img/16.jpg",
-            "alt": "Description for 16.jpg"
+            "src": "https://i.ibb.co/FzjYZw6/4.webp",
+            "alt": "Description for 4.webp"
           }
         ]
       }
@@ -139,12 +139,12 @@
         "description": "Description for Event I",
         "images": [
           {
-            "src": "/img/17.jpg",
-            "alt": "Description for 17.jpg"
+            "src": "https://i.ibb.co/Fhwn1Js/3.webp",
+            "alt": "Description for 3.webp"
           },
           {
-            "src": "/img/18.jpg",
-            "alt": "Description for 18.jpg"
+            "src": "https://i.ibb.co/vvTBZ4t/20.webp",
+            "alt": "Description for 20.webp"
           }
         ]
       },
@@ -153,12 +153,12 @@
         "description": "Description for Event J",
         "images": [
           {
-            "src": "/img/19.jpg",
-            "alt": "Description for 19.jpg"
+            "src": "https://i.ibb.co/GMR5bBx/19.webp",
+            "alt": "Description for 19.webp"
           },
           {
-            "src": "/img/20.jpg",
-            "alt": "Description for 20.jpg"
+            "src": "https://i.ibb.co/g9tqfWD/18.webp",
+            "alt": "Description for 18.webp"
           }
         ]
       }

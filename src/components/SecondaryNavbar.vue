@@ -22,11 +22,13 @@
               aria-labelledby="hs-dropdown-default">
 
               <!-- Iterative Links for Dropdown -->
+              <!-- Iterative Links for Dropdown -->
               <a v-for="data in imagesData" :key="data.year"
-                class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer"
                 @click="selectYear(data.year)">
                 {{ data.year }}
               </a>
+
 
             </div>
           </div>
@@ -60,7 +62,7 @@ export default defineComponent({
   setup() {
     const selectedYear = inject('selectedYear');
     const updateSelectedYear = inject('updateSelectedYear');
-
+    const imagesData = inject('globalData');
     const localYear = ref(selectedYear.value);  // defining localYear
 
     const dropdownOpen = ref(false)
@@ -77,46 +79,15 @@ export default defineComponent({
     }
 
     return {
-      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown
-    };
-  },
-
-
-
-  data() {
-    return {
-      imagesData: []
+      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown, imagesData
     };
   },
 
   methods: {
-    async fetchImagesData() {
-      try {
-        console.log('Fetching data...');
-        const response = await fetch(`${import.meta.env.BASE_URL}data/images.json`);
-        console.log('Response:', response);
-
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch images data.");
-        }
-
-        this.imagesData = await response.json();
-      } catch (error) {
-        console.error("Error fetching images data:", error);
-      }
-    },
-
     selectYear(year) {
       this.updateSelectedYear(year);
+      this.dropdownOpen.value = false
     }
-
-
-  },
-
-  mounted() {
-    this.fetchImagesData();
   }
-
 })
 </script>
