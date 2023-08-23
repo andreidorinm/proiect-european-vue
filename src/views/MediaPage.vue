@@ -1,14 +1,14 @@
 <template>
   <div>
     <SecondaryNavbar />
-    <div v-if="yearEvents">
+
+    <div v-if="pagedEvents && pagedEvents.length">
       <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div v-for="event in yearEvents" :key="event.title"
-          class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+        <div v-for="event in pagedEvents" :key="event.title"
+             class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
           <div class="h-52 flex flex-wrap overflow-hidden rounded-t-xl">
-            <!-- Loop through the images for each event -->
             <img v-for="image in event.images" :key="image.src" :src="image.src" :alt="image.alt"
-              class="object-cover w-full h-full">
+                 class="object-cover w-full h-full">
           </div>
           <div class="p-4 md:p-6">
             <span class="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
@@ -21,13 +21,17 @@
               {{ event.description }}
             </p>
           </div>
-          <div
-            class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
+          <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
             <!-- The rest of your code remains unchanged -->
           </div>
         </div>
       </div>
+
+      <!-- Pagination component -->
+      <Pagination :currentPage="currentPage" :totalPages="totalPages" @nextPage="handlePageChange" @prevPage="handlePageChange" @goToPage="handlePageChange" />
+
     </div>
+
     <div v-else>
       <NotFound />
     </div>
@@ -35,16 +39,19 @@
 </template>
 
 <script>
-import { defineComponent, ref, computed, onMounted, provide, inject } from 'vue';
+import { defineComponent, ref, computed, provide, inject } from 'vue';
 import NotFound from './NotFound.vue';
 import SecondaryNavbar from '../components/SecondaryNavbar.vue';
+import Pagination from '../components/Pagination.vue';
+import usePagination from '../helpers/usePagination';
 
 export default defineComponent({
   name: 'MediaPage',
 
   components: {
     NotFound,
-    SecondaryNavbar
+    SecondaryNavbar,
+    Pagination
   },
 
   props: {
@@ -55,32 +62,48 @@ export default defineComponent({
   },
 
   setup(props, { emit }) {
-    const imagesData = inject('globalData', ref([])); // default to an empty array
+    const imagesData = inject('globalData', ref([]));
     const currentYear = ref(props.year);
     provide('selectedYear', currentYear);
 
     const yearEvents = computed(() => {
-  if (imagesData.value) {
-    return imagesData.value.find(data => data.year === currentYear.value)?.data;
-  }
-  return null;
-});
+      if (!imagesData.value) return [];
+      return imagesData.value.find(data => data.year === currentYear.value)?.data || [];
+    });
 
+    const { currentPage, totalPages, pagedData, prevPage, nextPage, goToPage } = usePagination(yearEvents, 6);
+
+    function handlePageChange(page) {
+      if (page) {
+        goToPage(page);
+      } else {
+        if (currentPage.value < totalPages.value) {
+          nextPage();
+        } else {
+          prevPage();
+        }
+      }
+      scrollToTop();
+    }
+
+    function scrollToTop() {
+      window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    }
 
     function updateSelectedYear(year) {
       currentYear.value = year;
       emit('year-updated', year);
     }
 
-    // Provide the updateSelectedYear function for child components
     provide('updateSelectedYear', updateSelectedYear);
 
     return {
       currentYear,
-      yearEvents
+      pagedEvents: pagedData, // use pagedData from usePagination
+      totalPages,
+      currentPage,
+      handlePageChange
     };
   }
 });
-
 </script>
-

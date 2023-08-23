@@ -106,9 +106,7 @@
       <!-- End Col -->
 
       <div class="lg:col-span-4 mt-10 lg:mt-0">
-        <img class="w-full rounded-xl"
-          src="https://cdn.aiidatapro.net/media/bc/f7/fe/t780x490/bcf7fe5e76503f091a1c2f12db1268b6.jpg"
-          alt="Erasmus Students">
+        <GoogleMapComponent />
       </div>
       <!-- End Col -->
   </div>
@@ -118,10 +116,16 @@
   
 <script>
 import { defineComponent } from "vue";
+import GoogleMapComponent from "../components/GoogleMapComponent.vue";
+
 
 export default defineComponent({
-  name: 'HeroSection'
+  name: 'HeroSection',
+  components: {
+    GoogleMapComponent,
+  }
 }
+
 )
 </script>
   
