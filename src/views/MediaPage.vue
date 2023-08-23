@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, computed, onMounted, provide } from 'vue';
+import { defineComponent, ref, computed, onMounted, provide, inject } from 'vue';
 import NotFound from './NotFound.vue';
 import SecondaryNavbar from '../components/SecondaryNavbar.vue';
 
@@ -55,38 +55,22 @@ export default defineComponent({
   },
 
   setup(props, { emit }) {
-    const imagesData = ref([]);
+    const imagesData = inject('globalData', ref([])); // default to an empty array
     const currentYear = ref(props.year);
     provide('selectedYear', currentYear);
 
     const yearEvents = computed(() => {
-      return imagesData.value.find(data => data.year === currentYear.value)?.data;
-    });
+  if (imagesData.value) {
+    return imagesData.value.find(data => data.year === currentYear.value)?.data;
+  }
+  return null;
+});
+
 
     function updateSelectedYear(year) {
       currentYear.value = year;
       emit('year-updated', year);
     }
-
-    async function fetchYearData() {
-      try {
-        console.log('Fetching data...');
-        const response = await fetch(`${import.meta.env.BASE_URL}data/images.json`);
-        console.log('Response:', response);
-
-        if (response.ok) {
-          imagesData.value = await response.json();
-        } else {
-          console.error('Failed to fetch the JSON data');
-        }
-      } catch (error) {
-        console.error('Error fetching JSON data:', error);
-      }
-    }
-
-    onMounted(() => {
-      fetchYearData();
-    });
 
     // Provide the updateSelectedYear function for child components
     provide('updateSelectedYear', updateSelectedYear);

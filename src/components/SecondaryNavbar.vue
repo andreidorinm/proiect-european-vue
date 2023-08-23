@@ -6,10 +6,9 @@
 
           <!-- Dropdown -->
           <div class="hs-dropdown relative">
-            <button id="hs-dropdown-default" type="button"
+            <button @click="toggleDropdown" id="hs-dropdown-default" type="button"
               class="hs-dropdown-toggle py-2 px-4 flex justify-center items-center gap-2 rounded-md border bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 dark:focus:ring-offset-gray-750">
               {{ selectedYear }}
-
               <!-- Dropdown Arrow Icon -->
               <svg class="hs-dropdown-open:rotate-180 w-4 h-4 text-gray-00 dark:text-gray-400" width="16" height="16"
                 viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,16 +17,18 @@
             </button>
 
             <!-- Dropdown Menu -->
-            <div
+            <div :class="{ 'opacity-100': dropdownOpen, 'opacity-0': !dropdownOpen }"
               class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 "
               aria-labelledby="hs-dropdown-default">
 
               <!-- Iterative Links for Dropdown -->
+              <!-- Iterative Links for Dropdown -->
               <a v-for="data in imagesData" :key="data.year"
-                class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer"
                 @click="selectYear(data.year)">
                 {{ data.year }}
               </a>
+
 
             </div>
           </div>
@@ -61,8 +62,10 @@ export default defineComponent({
   setup() {
     const selectedYear = inject('selectedYear');
     const updateSelectedYear = inject('updateSelectedYear');
-
+    const imagesData = inject('globalData');
     const localYear = ref(selectedYear.value);  // defining localYear
+
+    const dropdownOpen = ref(false)
 
     watch(selectedYear, (newValue, oldValue) => {
       // If there's a change in value, update localYear
@@ -71,47 +74,20 @@ export default defineComponent({
       }
     });
 
+    function toggleDropdown() {
+      dropdownOpen.value = !dropdownOpen.value;
+    }
+
     return {
-      selectedYear, updateSelectedYear, localYear
-    };
-  },
-
-
-
-  data() {
-    return {
-      imagesData: []
+      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown, imagesData
     };
   },
 
   methods: {
-    async fetchImagesData() {
-      try {
-        console.log('Fetching data...');
-        const response = await fetch(`${import.meta.env.BASE_URL}data/images.json`);
-        console.log('Response:', response);
-
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch images data.");
-        }
-
-        this.imagesData = await response.json();
-      } catch (error) {
-        console.error("Error fetching images data:", error);
-      }
-    },
-
     selectYear(year) {
       this.updateSelectedYear(year);
+      this.dropdownOpen.value = false
     }
-
-
-  },
-
-  mounted() {
-    this.fetchImagesData();
   }
-
 })
 </script>
