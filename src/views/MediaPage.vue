@@ -79,10 +79,10 @@ export default defineComponent({
   },
   methods: {
     scrollToTop() {
-        const topElement = document.getElementById('top-of-events'); 
-        topElement.scrollIntoView({ behavior: 'smooth' });
+      const topElement = document.getElementById('top-of-events');
+      topElement.scrollIntoView({ behavior: 'smooth' });
     }
-},
+  },
 
   setup(props, { emit }) {
     const imagesData = inject('globalData', ref([]));
@@ -90,8 +90,10 @@ export default defineComponent({
     provide('selectedYear', currentYear);
 
     const yearEvents = computed(() => {
+      if (!imagesData.value) return [];
       return imagesData.value.find(data => data.year === currentYear.value)?.data || [];
     });
+
 
     const currentPage = ref(1);
     const itemsPerPage = ref(6);
