@@ -17,7 +17,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   data() {
     return {
-      videoUrl: 'https://www.youtube.com/embed/SiR6iQQ7OS8'
+      videoUrl: 'https://www.youtube.com/embed/aJaZc4E8Y4U'
     }
   }}
 )
