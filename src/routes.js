@@ -7,7 +7,7 @@ import Tutoriale from "./views/Tutoriale.vue";
 /** @type {import('vue-router').RouterOptions['routes']} */
 export let routes = [
   { path: '/', component: Home },
-  { path: '/about', component: About, meta: { title: 'About' } },
+  { path: '/about', component: About, meta: { title: 'Afla mai multe' } },
   { path: '/:year/link1', component: MediaPage, props: route => ({ year: Number(route.params.year) }) },
   { path: '/tutoriale', component: Tutoriale, meta: { title: 'Tutoriale' } },
   { path: '/:path(.*)', component: NotFound }

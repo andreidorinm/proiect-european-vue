@@ -8,12 +8,14 @@
       <!-- End Col -->
 
       <div class="mt-3">
-        <p class="text-gray-500">Acesta este un design independent și poate nu corespunde cu ghidurile <a
+        <p class="text-gray-500">„Finanțat de Uniunea Europeană. Punctele de vedere și opiniile exprimate aparțin, însă, exclusiv autorului (autorilor) și nu reflectă neapărat punctele de vedere și opiniile Uniunii Europene sau ale ANPCDEFP. Nici Uniunea Europeană și nici ANPCDEFP nu pot fi considerate răspunzătoare pentru acestea”.  
+          <!-- <a
             class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
-            href="#">Erasmus</a></p>
+            href="#">Erasmus</a> -->
+          </p>
+          <br>
         <p class="text-gray-500 text-center">
-          ©Scoala. 2023 <br>
-          Toate drepturile rezervate.
+          ©Școala Gimnazială Specială Sfântul Nicolae. 2023 
         </p>
 
       </div>
