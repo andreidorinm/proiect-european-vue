@@ -1,14 +1,14 @@
 <template>
   <div>
     <nav class="bg-gray-800 sticky top-0 z-50">
-      <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
+      <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-">
+        <div class="flex items-center justify-between h-20">
           <div class="flex items-center">
             <div class="flex-shrink-0">
               <img
-                  class="w-8 h-8"
-                  src="/img/logos/workflow-mark-on-dark.svg"
-                  alt="Workflow logo"
+                  class="w-20 h-20"
+                  src="/img/logos/logo_scoala.svg"
+                  alt="Scoala logo"
               />
             </div>
             <div class="hidden md:block">
@@ -135,9 +135,9 @@ export default defineComponent({
     showMenu: false,
     showProfileMenu: false,
     links: [
-      {text: 'Home', to: '/'},
-      {text: 'About', to: '/about'},
+      {text: 'Acasa', to: '/'},
       {text: 'Tutoriale', to: '/tutoriale'},
+      {text: 'Despre noi', to: '/about'},
     ],
   }),
 })
