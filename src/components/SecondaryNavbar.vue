@@ -25,7 +25,7 @@
               <!-- Iterative Links for Dropdown -->
               <a v-for="data in imagesData" :key="data.year"
                 class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer"
-                @click="selectYear(data.year)">
+                @click.stop="selectYear(data.year)">
                 {{ data.year }}
               </a>
 
@@ -63,12 +63,11 @@ export default defineComponent({
     const selectedYear = inject('selectedYear');
     const updateSelectedYear = inject('updateSelectedYear');
     const imagesData = inject('globalData');
-    const localYear = ref(selectedYear.value);  // defining localYear
+    const localYear = ref(selectedYear.value);  
 
     const dropdownOpen = ref(false)
 
     watch(selectedYear, (newValue, oldValue) => {
-      // If there's a change in value, update localYear
       if (newValue !== oldValue) {
         localYear.value = newValue;
       }
@@ -77,17 +76,14 @@ export default defineComponent({
     function toggleDropdown() {
       dropdownOpen.value = !dropdownOpen.value;
     }
+    function selectYear(year) {
+      updateSelectedYear(year);
+      dropdownOpen.value = false;
+    }
 
     return {
-      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown, imagesData
+      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown, imagesData, selectYear
     };
-  },
-
-  methods: {
-    selectYear(year) {
-      this.updateSelectedYear(year);
-      this.dropdownOpen.value = false
-    }
   }
 })
 </script>

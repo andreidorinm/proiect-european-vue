@@ -24,7 +24,6 @@ export default {
 
 .skeleton {
   width: 100%;
-  height: 52px; 
   padding-top: 100%; 
   background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0);
   background-size: 200% 100%;

@@ -35,7 +35,7 @@ export default defineComponent({
       { name: "CP Rioturbio", location: { lat: 42.8747, lng: -5.6733 } },
     ];
 
-    const destinationSchool = { name: "Special Secondary School St. Nicholas", location: { lat: 44.4214, lng: 26.0828 } };
+    const destinationSchool = { name: "Școala Gimnazială Specială Sfântul Nicolae", location: { lat: 44.4214, lng: 26.0828 } };
 
     const schools = [...institutions, destinationSchool];
 
