@@ -135,7 +135,7 @@ export default defineComponent({
     showMenu: false,
     showProfileMenu: false,
     links: [
-      {text: 'Acasa', to: '/'},
+      {text: 'Acasa', to: '/acasa'},
       {text: 'Tutoriale', to: '/tutoriale'},
       {text: 'Despre noi', to: '/despre-noi'},
     ],

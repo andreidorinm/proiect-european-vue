@@ -52,7 +52,7 @@ import usePagination from '../helpers/usePagination';
 import ImageSkeleton from '../components/ImageSkeleton.vue';
 
 export default defineComponent({
-  name: 'MediaPage',
+  name: 'ProjectDetails',
 
   components: {
     NotFound,

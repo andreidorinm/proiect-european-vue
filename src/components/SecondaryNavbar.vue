@@ -22,27 +22,21 @@
               aria-labelledby="hs-dropdown-default">
 
               <!-- Iterative Links for Dropdown -->
-              <!-- Iterative Links for Dropdown -->
-              <a v-for="data in imagesData" :key="data.year"
+              <a v-for="year in years" :key="year"
                 class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 cursor-pointer"
-                @click.stop="selectYear(data.year)">
-                {{ data.year }}
+                @click.stop="selectYear(year)">
+                {{ year }}
               </a>
-
 
             </div>
           </div>
 
           <!-- Navbar Links -->
           <div class="flex flex-wrap space-x-3 sm:space-x-5 sm:mt-0">
-            <a :href="`/${selectedYear || ''}/link1`"
-              class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300">Landing</a>
-            <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300"
-              href="#">Detalii proiect</a>
-            <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300"
-              href="#">Mobilitati</a>
-            <a class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300"
-              href="#">Galerie</a>
+            <router-link v-for="link in dynamicLinks" :key="link.href" :to="link.href"
+              class="font-medium text-gray-600 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300">
+              {{ link.text }}
+            </router-link>
           </div>
 
         </div>
@@ -51,10 +45,8 @@
   </header>
 </template>
 
-
 <script>
-import { defineComponent, inject, watch, ref } from "vue";
-
+import { defineComponent, inject, watch, ref, computed } from "vue";
 
 export default defineComponent({
   name: 'SecondaryNavbar',
@@ -62,10 +54,21 @@ export default defineComponent({
   setup() {
     const selectedYear = inject('selectedYear');
     const updateSelectedYear = inject('updateSelectedYear');
-    const imagesData = inject('globalData');
-    const localYear = ref(selectedYear.value);  
+    const localYear = ref(selectedYear.value);
 
-    const dropdownOpen = ref(false)
+    const dropdownOpen = ref(false);
+
+    // Static list of years
+    const years = [2021, 2022, 2023, 2024, 2025];
+
+    const dynamicLinks = computed(() => {
+      if (!localYear.value) return [];
+      return [
+        { href: `/${localYear.value}/detalii-proiect`, text: `Detalii proiect pentru anul ${localYear.value}` },
+        { href: `/${localYear.value}/mobilitati`, text: `Mobilitati pentru anul ${localYear.value}` },
+        { href: `/${localYear.value}/galerie`, text: `Galerie pentru anul ${localYear.value}` }
+      ];
+    });
 
     watch(selectedYear, (newValue, oldValue) => {
       if (newValue !== oldValue) {
@@ -82,8 +85,8 @@ export default defineComponent({
     }
 
     return {
-      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown, imagesData, selectYear
+      selectedYear, updateSelectedYear, localYear, dropdownOpen, toggleDropdown, years, selectYear, dynamicLinks
     };
   }
-})
+});
 </script>
