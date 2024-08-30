@@ -137,7 +137,7 @@ export default defineComponent({
     links: [
       {text: 'Acasa', to: '/'},
       {text: 'Tutoriale', to: '/tutoriale'},
-      {text: 'Despre noi', to: '/about'},
+      {text: 'Despre noi', to: '/despre-noi'},
     ],
   }),
 })
