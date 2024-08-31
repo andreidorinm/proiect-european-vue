@@ -22,10 +22,10 @@
           <span class="text-xs font-medium text-gray-800 uppercase dark:text-gray-200">Institutii Partenere:</span>
 
           <div class="mt-4 flex gap-x-4">
-            <img class="w-22 h-10" src="/img/logos/scoala_rioturbio.webp">
-            <img class="w-22 h-10" src="/img/logos/scoala_cehia2.webp">
-            <img class="w-22 h-10" src="/img/logos/scoala_ungaria.webp">
-            <img class="w-22 h-10" src="/img/logos/scoala_cehia.webp">
+            <img class="w-22 h-10" src="https://erasmussfantulnicolae.b-cdn.net/img/logos/scoala_rioturbio.webp">
+            <img class="w-22 h-10" src="https://erasmussfantulnicolae.b-cdn.net/img/logos/scoala_cehia2.webp">
+            <img class="w-22 h-10" src="https://erasmussfantulnicolae.b-cdn.net/img/logos/scoala_ungaria.webp">
+            <img class="w-22 h-10" src="https://erasmussfantulnicolae.b-cdn.net/img/logos/scoala_cehia.webp">
           </div>
         </div>
         <!-- End Partnering Institutions -->

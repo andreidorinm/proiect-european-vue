@@ -12,13 +12,12 @@
         </p>
       </div>
 
-      <div class="flex justify-center items-center">
-        <component :is="currentContent.video.isIframe ? 'iframe' : 'video'" :src="currentContent.video.src"
-          :title="currentContent.video.title" controls class="rounded-lg shadow-lg w-full h-[58vh] object-cover"
+      <div v-for="(video, index) in currentContent.videos" :key="index" class="mb-8">
+        <iframe :src="video.src" :title="video.title" controls class="rounded-lg shadow-lg w-full h-[58vh] object-cover"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
           Your browser does not support the video tag.
-        </component>
+        </iframe>
       </div>
     </div>
   </div>
@@ -46,20 +45,26 @@ export default defineComponent({
       2021: {
         title: "2021: Un An de Acreditare Digitală",
         description: "Acest videoclip evidențiază inițiativele cheie ale școlii noastre din 2021, axate pe dezvoltarea competențelor digitale și implementarea metodelor de predare inovatoare prin programe de formare internațională.",
-        video: {
-          src: "https://www.youtube.com/embed/cqzvFX4vY4o",
-          title: "Videoclip Educational 2021",
-          isIframe: true,
-        },
+        videos: [
+          {
+            src: "https://www.youtube.com/embed/cqzvFX4vY4o",
+            title: "Videoclip Educational 2021 - Part 1"
+          }
+        ],
       },
       2022: {
         title: "Educational Video for 2022",
         description: "This video highlights the ongoing development of digital skills and educational strategies implemented in 2022.",
-        video: {
-          src: "/videos/video-2022.mp4",
-          title: "Videoclip Educational 2022",
-          isIframe: false,
-        },
+        videos: [
+          {
+            src: "https://www.youtube.com/embed/pFjQ7PUetoE",
+            title: "Videoclip Educational 2022"
+          },
+          {
+            src: "https://www.youtube.com/embed/qVpZ8mcCL18",
+            title: "Videoclip Educational 2022 - Part 2"
+          },
+        ],
       },
     });
 

@@ -42,9 +42,9 @@ export default defineComponent({
     return {
       currentYear: new Date().getFullYear(),
       carouselImages: [
-        { src: '/img/materiale/poza1.jpg', alt: 'Activitati 1' },
-        { src: '/img/materiale/poza2.jpg', alt: 'Activitati 2' },
-        { src: '/img/materiale/poza3.jpg', alt: 'Activitati 3' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/materiale/poza1.jpg', alt: 'Activitati 1' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/materiale/poza2.jpg', alt: 'Activitati 2' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/materiale/poza3.jpg', alt: 'Activitati 3' },
       ]
     }
   },

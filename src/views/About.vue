@@ -25,12 +25,12 @@
           </p>
         </div>
         <div class="mt-8 lg:mt-0 lg:w-1/2 lg:flex lg:justify-end">
-          <img src="/img/materiale/acreditare.jpg" alt="Poster Erasmus" class="w-full max-w-xs rounded-lg shadow-lg">
+          <img src="https://erasmussfantulnicolae.b-cdn.net/img/materiale/acreditare.jpg" alt="Poster Erasmus" class="w-full max-w-xs rounded-lg shadow-lg">
         </div>
       </div>
       <div class="mt-16 flex justify-center">
         <iframe
-          src="/pdf/diploma.pdf"
+          src="https://erasmussfantulnicolae.b-cdn.net/pdf/diploma.pdf"
           class="w-full max-w-4xl h-[690px] rounded-lg shadow-lg"
           title="Diploma Acreditare"
         ></iframe>

@@ -5,7 +5,7 @@
         <div class="flex items-center justify-between h-20">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="w-20 h-20" src="/img/logos/logo_scoala.svg" alt="Scoala logo" />
+              <img class="w-20 h-20" src="https://erasmussfantulnicolae.b-cdn.net/img/logos/logo-scoala.png" alt="Scoala logo" />
             </div>
             <div class="hidden md:block">
               <div class="flex items-baseline ml-10">
@@ -37,7 +37,7 @@
               </button>
             </div>
 
-            <img class="w-74 h-16 ml-2 " src="/img/logos/logo.jpg" alt="Co-finantare Erasmus" />
+            <img class="w-74 h-12 ml-2 " src="https://erasmussfantulnicolae.b-cdn.net/img/logos/logo.jpg" alt="Co-finantare Erasmus" />
           </div>
         </div>
       </div>

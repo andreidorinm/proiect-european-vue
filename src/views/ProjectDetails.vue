@@ -118,7 +118,7 @@ export default defineComponent({
         ],
         conclusion: "Profesorii au dobândit competențe de a aplica principiile învățării prin joc și gamificării pentru a crește interesul și participarea elevilor. Au învățat să creeze recompense digitale, să upgradeze lecțiile introducând elemente de joc, și să utilizeze resursele gratuite disponibile online pentru a integra diverse aplicații digitale în procesul educațional.",
         image: {
-          src: "/img/materiale/poster.png",
+          src: "https://erasmussfantulnicolae.b-cdn.net/img/materiale/poster-2021.png",
           alt: "Educational Event 2021"
         }
       },
@@ -151,7 +151,7 @@ export default defineComponent({
         ],
         conclusion: "Profesorii au dobândit competențe de a aplica...",
         image: {
-          src: "path_to_image_for_2022.jpg",
+          src: "https://erasmussfantulnicolae.b-cdn.net/img/materiale/poster-2022.jpg",
           alt: "Educational Event 2022"
         }
       }
