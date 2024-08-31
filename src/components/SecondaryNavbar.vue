@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { defineComponent, inject, watch, ref, computed } from "vue";
+import { defineComponent, inject, watch, ref, computed, nextTick } from "vue";
 
 export default defineComponent({
   name: 'SecondaryNavbar',
@@ -75,8 +75,9 @@ export default defineComponent({
     function toggleDropdown() {
       dropdownOpen.value = !dropdownOpen.value;
     }
-    function selectYear(year) {
+    async function selectYear(year) {
       updateSelectedYear(year);
+      await nextTick();
       dropdownOpen.value = false;
     }
 
