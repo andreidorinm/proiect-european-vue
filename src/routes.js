@@ -9,7 +9,7 @@ import Tutoriale from "./views/Tutoriale.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export let routes = [
-  { path: '/acasa', component: Home },
+  { path: '/', component: Home },
   { path: '/despre-noi', component: About, meta: { title: 'Afla mai multe' } },
   { path: '/:year/mobilitati', component: Mobilities, props: route => ({ year: Number(route.params.year) }) },
   { path: '/:year/detalii-proiect', component: ProjectDetails, props: route => ({ year: Number(route.params.year) }) },

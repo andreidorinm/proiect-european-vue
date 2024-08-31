@@ -13,10 +13,12 @@
       </div>
 
       <div class="flex justify-center items-center">
-        <video :src="currentContent.video.src" :title="currentContent.video.title" controls
-          class="rounded-lg shadow-lg w-full h-[58vh] object-cover">
+        <component :is="currentContent.video.isIframe ? 'iframe' : 'video'" :src="currentContent.video.src"
+          :title="currentContent.video.title" controls class="rounded-lg shadow-lg w-full h-[58vh] object-cover"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
           Your browser does not support the video tag.
-        </video>
+        </component>
       </div>
     </div>
   </div>
@@ -27,7 +29,7 @@ import { defineComponent, ref, computed, provide } from 'vue';
 import SecondaryNavbar from '../components/SecondaryNavbar.vue';
 
 export default defineComponent({
-  name: 'ProjectDetails',
+  name: 'Mobilities',
   components: {
     SecondaryNavbar,
   },
@@ -45,8 +47,9 @@ export default defineComponent({
         title: "2021: Un An de Acreditare Digitală",
         description: "Acest videoclip evidențiază inițiativele cheie ale școlii noastre din 2021, axate pe dezvoltarea competențelor digitale și implementarea metodelor de predare inovatoare prin programe de formare internațională.",
         video: {
-          src: "/videos/video-2021.mp4",
+          src: "https://www.youtube.com/embed/cqzvFX4vY4o",
           title: "Videoclip Educational 2021",
+          isIframe: true,
         },
       },
       2022: {
@@ -55,6 +58,7 @@ export default defineComponent({
         video: {
           src: "/videos/video-2022.mp4",
           title: "Videoclip Educational 2022",
+          isIframe: false,
         },
       },
     });
