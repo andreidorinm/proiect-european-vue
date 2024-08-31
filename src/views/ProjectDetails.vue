@@ -39,7 +39,8 @@
         </div>
 
         <div class="lg:w-1/3 flex justify-center items-start">
-          <img :src="currentContent.image.src" :alt="currentContent.image.alt" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+          <img :src="currentContent.image.src" :alt="currentContent.image.alt"
+            class="rounded-lg shadow-lg w-full h-auto object-cover" />
         </div>
       </div>
     </div>
@@ -64,36 +65,58 @@ export default defineComponent({
   setup(props) {
     const currentYear = ref(props.year);
 
-    // Example content for each year
     const contentData = ref({
       2021: {
         title: "În anul 2021 de Acreditare",
-        description: "Școala noastră a abordat ținta stringentă a dezvoltării digitale...",
+        description: "Școala noastră a abordat ținta stringentă a dezvoltării digitale, realizând 7 mobilități de formare pentru profesori în diverse aplicații digitale care să crească gradul de atractivitate și interactivitate în cadrul lecțiilor și să dezvolte competențele profesorilor de a stoca și share-ui digital, on-line, materiale, documente, lecții.",
         paragraphs: [
-          "În perioada 06-12.02.2021, doamnele profesoare Cristina Cotescu...",
-          "În perioada 11.-17.04.2021, doamnele profesoare Nicoleta Radu...",
-          "În perioada 01.08.-12.08.2021, doamnele profesoare Mădălina Constantin..."
+          "În perioada 06-12.02.2021, doamnele profesoare Cristina Cotescu și Andreea Blăgoi au parcurs cursul de formare „Discover the power of Game Based Education and Gamification in education”, în Bologna, Italia, furnizat de Erasmus Learning Academy (ELA).",
+          "În perioada 11-17.04.2021, doamnele profesoare Nicoleta Radu și Elena Drăgan-Cara au beneficiat de cursul de formare „Cloud Computing for Education”, în Istanbul, Turcia, furnizat de Cappadocia Education.",
+          "În perioada 01.08-12.08.2021, doamnele profesoare Mădălina Constantin, Daniela Cara și Alina Țuțu au participat la cursul de formare „TEL- Technology Enhanced Learning” în St. Julian’s, Malta."
         ],
         detailsTitle: "Detalii despre cursurile abordate:",
         details: [
           {
             title: "Discover the power of Game Based Education and Gamification in education",
             items: [
-              "întelegerea diferenței dintre invățarea prin joc și gamificare",
-              "experimentarea unor activități de învățare prin joc...",
-              "crearea de experiențe de învățare out-door..."
+              "Înțelegerea diferenței dintre învățarea prin joc și gamificare",
+              "Experimentarea unor activități de învățare prin joc",
+              "Înțelegerea modelului de învățare prin gamificare, analiza exemplelor și a instrumentelor de gamificare, stimularea gândirii critice și creative prin gamificare",
+              "Utilizarea unor aplicații digitale atât pentru realizarea învățării prin joc cât și a gamificării",
+              "Crearea de experiențe de învățare în stilul „Escape Rooms” pentru a crește participarea elevilor",
+              "Crearea de experiențe de învățare out-door pentru învățarea prin joc și motivarea",
+              "Pașii pentru gamificarea lecțiilor și integrarea mecanismelor de învățare prin joc în predare; cele mai atractive elemente de joc care antrenează elevii în procesul predării-învățării"
             ]
           },
           {
             title: "Cloud Computing for Education",
             items: [
-              "utilizarea Google drive și Suitei Google pentru educație",
-              "crearea și utilizarea de Google forms pentru evaluare...",
-              "utilizarea de aplicații digitale gratuite pentru prezentări: Padlet"
+              "Utilizarea Google Drive și Suitei Google pentru educație (Google Docs, Sheets, Slides) pentru colaborare mai facilă între profesori",
+              "Utilizarea Google Calendar pentru o informare și comunicare mai eficientă",
+              "Crearea și utilizarea de Google Forms pentru evaluare (elevi sau personalul școlii) și alte aplicații online pentru evaluare (ex. Kahoot)",
+              "Utilizarea de aplicații digitale gratuite pentru prezentări: Padlet"
+            ]
+          },
+          {
+            title: "TEL- Technology Enhanced Learning",
+            items: [
+              "Crearea unui blog și a unui website pe platforme gratuite (blogger.com, wix.com)",
+              "Editare clipuri video cu Ed-puzzle.com",
+              "Crearea de diverse exerciții online pentru educație (wordwall.net, learningapps.org)",
+              "Înregistrarea ecranului computerului cu Loom.com",
+              "Crearea de slide-uri animate cu Adobe Express (express.adobe.com)",
+              "Crearea de identități virtuale (avataruri - voki.com, avachara.com, hexatar.com)",
+              "Crearea de benzi desenate în scop educativ (storyboardthat.com)",
+              "Webquest și wiki",
+              "Creare de wiki pentru educație (pbwork.com)",
+              "Creare de rebusuri (www.puzzlemaker.discoveryeducation.com), hărți mentale (coggle.it), word clouds (wordart.com)",
+              "Creare de infografice cu canva.com",
+              "Creare de povești digitale (storyjumper.com)",
+              "Utilizarea tablei interactive"
             ]
           }
         ],
-        conclusion: "Profesorii au dobândit competențe de a aplica...",
+        conclusion: "Profesorii au dobândit competențe de a aplica principiile învățării prin joc și gamificării pentru a crește interesul și participarea elevilor. Au învățat să creeze recompense digitale, să upgradeze lecțiile introducând elemente de joc, și să utilizeze resursele gratuite disponibile online pentru a integra diverse aplicații digitale în procesul educațional.",
         image: {
           src: "/img/materiale/poster.png",
           alt: "Educational Event 2021"
@@ -132,7 +155,6 @@ export default defineComponent({
           alt: "Educational Event 2022"
         }
       }
-      // Add more years as needed
     });
 
     const currentContent = computed(() => {
