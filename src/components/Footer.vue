@@ -2,8 +2,7 @@
   <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
     <div class="text-center">
       <div>
-        <a class="flex-none text-xl font-semibold text-black dark:text-white" href="#" aria-label="Brand">Proiect
-          European</a>
+        <a class="flex-none text-xl font-semibold text-black dark:text-white" href="#" aria-label="Brand">Proiect European</a>
       </div>
 
       <div class="mt-3">
@@ -22,28 +21,24 @@
         <a class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
           href="https://www.facebook.com/p/%C8%98coala-Profesional%C4%83-Special%C4%83-Sf-Nicolae-100063916208901/?locale=ro_RO"
           target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636A9 9 0 116.636 18.364 9 9 0 0118.364 5.636z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 8.25v3.376a.375.375 0 01-.375.375h-2.063a.375.375 0 00-.375.375v3.625a.375.375 0 01-.375.375h-3.25a.375.375 0 01-.375-.375v-3.625a.375.375 0 00-.375-.375H7.125a.375.375 0 01-.375-.375V8.25a.375.375 0 01.375-.375h2.563a.375.375 0 00.375-.375V5.125a.375.375 0 01.375-.375h2.25a.375.375 0 01.375.375v2.375a.375.375 0 00.375.375h2.563a.375.375 0 01.375.375z" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="0" class="w-6 h-6">
+            <path d="M22.676 0h-21.352c-0.732 0-1.324 0.592-1.324 1.324v21.352c0 0.732 0.592 1.324 1.324 1.324h11.493v-9.294h-3.126v-3.622h3.126v-2.672c0-3.089 1.89-4.771 4.646-4.771 1.325 0 2.463 0.099 2.794 0.143v3.24h-1.916c-1.504 0-1.795 0.715-1.795 1.762v2.307h3.589l-0.467 3.622h-3.122v9.294h6.123c0.732 0 1.324-0.592 1.324-1.324v-21.352c0-0.732-0.592-1.324-1.324-1.324z"></path>
           </svg>
         </a>
 
         <!-- Personal Website Link -->
         <a class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
           href="http://scoalaprofesionalasfnicolae.ro/" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3.75c-2.625 0-5.366.21-7.963.545-1.216.158-2.037.991-2.037 1.916 0 5.052.964 10.092 3.282 13.596a4.785 4.785 0 003.256 1.827c1.518.08 3.042.142 4.585.142 1.543 0 3.067-.062 4.585-.142a4.785 4.785 0 003.256-1.827c2.318-3.504 3.282-8.544 3.282-13.596 0-.925-.82-1.758-2.037-1.916-2.597-.336-5.338-.545-7.963-.545z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75h1.5v1.5H9v-1.5zM12 12.75h1.5v1.5H12v-1.5zM15 12.75h1.5v1.5H15v-1.5z" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="0" class="w-6 h-6">
+            <path d="M12 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zm0 18c-4.411 0-8-3.589-8-8 0-0.203 0.007-0.405 0.019-0.605 1.591-0.196 3.672-0.372 5.591-0.455-0.019 0.274-0.038 0.552-0.038 0.83 0 0.552 0.048 1.084 0.133 1.597 1.523-0.088 3.129-0.146 4.795-0.146s3.272 0.058 4.795 0.146c0.086-0.513 0.133-1.045 0.133-1.597 0-0.279-0.019-0.556-0.038-0.83 1.918 0.083 4 0.259 5.591 0.455 0.012 0.2 0.019 0.402 0.019 0.605 0 4.411-3.589 8-8 8zm4.181-4.208c-1.314-0.369-2.664-0.723-4.181-0.723s-2.867 0.354-4.181 0.723c-0.573-0.836-0.931-1.829-0.931-2.792 0-2.209 2.507-4 5.5-4s5.5 1.791 5.5 4c0 0.963-0.358 1.956-0.931 2.792zm-4.181-7.792c-1.933 0-3.5-0.672-3.5-1.5s1.567-1.5 3.5-1.5 3.5 0.672 3.5 1.5-1.567 1.5-3.5 1.5z"></path>
           </svg>
         </a>
 
         <!-- Erasmus Website Link -->
         <a class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
           href="https://erasmus-plus.ec.europa.eu/" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v18H3V3z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75v4.5h4.5v-4.5h-4.5z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 4.5h4.5v4.5h-4.5V4.5zM4.5 9.75h4.5v4.5H4.5v-4.5zM9.75 14.25v4.5h4.5v-4.5h-4.5zM14.25 9.75h4.5v4.5h-4.5v-4.5zM9.75 9.75h4.5v4.5h-4.5v-4.5z" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="0" class="w-6 h-6">
+            <path d="M3 3v18h18v-18h-18zM21 21h-18v-18h18v18zM9.75 9.75h4.5v4.5h-4.5v-4.5zM15 8.25h-6v7.5h6v-7.5zM9.75 4.5h4.5v2.25h-4.5v-2.25zM4.5 9.75h2.25v4.5h-2.25v-4.5zM9.75 17.25v-2.25h4.5v2.25h-4.5z"></path>
           </svg>
         </a>
       </div>
