@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div class="app-container">
     <nav class="bg-gray-800 sticky top-0 z-50">
       <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-">
         <div class="flex items-center justify-between h-20">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="w-20 h-20" src="https://erasmussfantulnicolae.b-cdn.net/img/logos/logo-scoala.png" alt="Scoala logo" />
+              <img class="w-20 h-20" src="https://erasmussfantulnicolae.b-cdn.net/img/logos/logo-scoala.png"
+                alt="Scoala logo" />
             </div>
             <div class="hidden md:block">
               <div class="flex items-baseline ml-10">
@@ -37,7 +38,8 @@
               </button>
             </div>
 
-            <img class="w-74 h-12 ml-2 " src="https://erasmussfantulnicolae.b-cdn.net/img/logos/logo.jpg" alt="Co-finantare Erasmus" />
+            <img class="w-74 h-12 ml-2 " src="https://erasmussfantulnicolae.b-cdn.net/img/logos/logo.jpg"
+              alt="Co-finantare Erasmus" />
           </div>
         </div>
       </div>
@@ -92,3 +94,11 @@ export default defineComponent({
   }),
 })
 </script>
+
+<style>
+@media only screen and (max-width: 600px) {
+  .app-container {
+    width: 446px;
+  }
+}
+</style>
