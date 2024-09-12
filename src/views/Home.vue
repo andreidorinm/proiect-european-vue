@@ -42,9 +42,23 @@ export default defineComponent({
     return {
       currentYear: new Date().getFullYear(),
       carouselImages: [
-        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/materiale/poza1.jpg', alt: 'Activitati 1' },
-        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/materiale/poza2.jpg', alt: 'Activitati 2' },
-        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/materiale/poza3.jpg', alt: 'Activitati 3' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/1.jpeg', alt: 'Activitati 1' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/2.jpeg', alt: 'Activitati 2' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/3.jpeg', alt: 'Activitati 3' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/4.jpeg', alt: 'Activitati 4' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/5.jpeg', alt: 'Activitati 5' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/6.jpeg', alt: 'Activitati 6' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/7.jpeg', alt: 'Activitati 7' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/8.jpeg', alt: 'Activitati 8' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/9.jpeg', alt: 'Activitati 9' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/10.jpeg', alt: 'Activitati 10' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/11.jpeg', alt: 'Activitati 11' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/12.jpeg', alt: 'Activitati 12' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/13.jpeg', alt: 'Activitati 13' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/14.jpeg', alt: 'Activitati 14' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/15.jpeg', alt: 'Activitati 15' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/16.jpeg', alt: 'Activitati 16' },
+        { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/17.jpeg', alt: 'Activitati 17' }
       ]
     }
   },
@@ -55,3 +69,5 @@ export default defineComponent({
   }
 });
 </script>
+
+
