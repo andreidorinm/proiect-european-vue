@@ -43,7 +43,7 @@ export default defineComponent({
 
     const contentData = ref({
       2021: {
-        title: "2021: Un An de Acreditare Digitală",
+        title: "2021: Curs- The power of Game Based Learning and Gamification in education",
         description: "Acest videoclip evidențiază inițiativele cheie ale școlii noastre din 2021, axate pe dezvoltarea competențelor digitale și implementarea metodelor de predare inovatoare prin programe de formare internațională.",
         videos: [
           {
