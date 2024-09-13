@@ -2,22 +2,16 @@
   <div class="container mx-auto px-4 py-8">
     <!-- Tabs -->
     <div class="flex justify-center mb-6">
-      <button
-        @click="activeTab = 'Digitalizare'"
-        :class="[
-          'px-6 py-2 font-semibold rounded-l',
-          activeTab === 'Digitalizare' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800',
-        ]"
-      >
+      <button @click="activeTab = 'Digitalizare'" :class="[
+        'px-6 py-2 font-semibold rounded-l',
+        activeTab === 'Digitalizare' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800',
+      ]">
         Digitalizare
       </button>
-      <button
-        @click="activeTab = 'Terapii'"
-        :class="[
-          'px-6 py-2 font-semibold rounded-r',
-          activeTab === 'Terapii' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800',
-        ]"
-      >
+      <button @click="activeTab = 'Terapii'" :class="[
+        'px-6 py-2 font-semibold rounded-r',
+        activeTab === 'Terapii' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800',
+      ]">
         Terapii
       </button>
     </div>
@@ -52,12 +46,19 @@ export default defineComponent({
         'https://www.youtube.com/embed/roJkXrcKvdY',
         'https://www.youtube.com/embed/GDbxHjNlr1s',
         'https://www.youtube.com/embed/xvww-ZKFwe4',
+        'https://www.youtube.com/embed/VGqUh28KXuM',
+        'https://www.youtube.com/embed/BbRUfLb91_0',
+        'https://www.youtube.com/embed/YG0SBkBTleo',
+        'https://www.youtube.com/embed/FlJHDyHvE60'
       ],
       digitalizarePdfs: [
         'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/LOOM.pdf',
         'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/Turorial%20Storyboard.pdf',
         'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/Tutorial%20Avataruri.pdf',
         'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/Tutorial%20mind%20maps.pdf',
+        'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/Tutorial_ACTIONBOUND.pdf',
+        'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/Tutorial_LearningApps.org.pdf',
+        'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/tutorial_socrative_curs6.pdf'
       ],
       terapiiVideos: [],
       terapiiPdfs: [
