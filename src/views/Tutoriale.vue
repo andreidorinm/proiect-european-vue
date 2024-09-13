@@ -49,7 +49,8 @@ export default defineComponent({
         'https://www.youtube.com/embed/VGqUh28KXuM',
         'https://www.youtube.com/embed/BbRUfLb91_0',
         'https://www.youtube.com/embed/YG0SBkBTleo',
-        'https://www.youtube.com/embed/FlJHDyHvE60'
+        'https://www.youtube.com/embed/FlJHDyHvE60',
+        'https://www.youtube.com/embed/HeciUE6-Fx8'
       ],
       digitalizarePdfs: [
         'https://erasmussfantulnicolae.b-cdn.net/pdf/tutoriale/digitalizare/LOOM.pdf',

@@ -12,13 +12,10 @@
         </p>
       </div>
 
-      <div class="flex justify-center items-center">
-        <component :is="currentContent.video.isIframe ? 'iframe' : 'video'" :src="currentContent.video.src"
-          :title="currentContent.video.title" controls class="rounded-lg shadow-lg w-full h-[58vh] object-cover"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-          Your browser does not support the video tag.
-        </component>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div v-for="(image, index) in currentContent.images" :key="index" class="flex justify-center items-center">
+          <img :src="image.src" :alt="image.alt" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+        </div>
       </div>
     </div>
   </div>
@@ -44,22 +41,21 @@ export default defineComponent({
 
     const contentData = ref({
       2021: {
-        title: "2021: Un An de Acreditare Digitală",
-        description: "Acest videoclip evidențiază inițiativele cheie ale școlii noastre din 2021, axate pe dezvoltarea competențelor digitale și implementarea metodelor de predare inovatoare prin programe de formare internațională.",
-        video: {
-          src: "https://www.youtube.com/embed/cqzvFX4vY4o",
-          title: "Videoclip Educational 2021",
-          isIframe: true,
-        },
+        title: '2021: Un An de Acreditare Digitală',
+        description:
+          'Acest album de imagini evidențiază inițiativele cheie ale școlii noastre din 2021, axate pe dezvoltarea competențelor digitale și implementarea metodelor de predare inovatoare prin programe de formare internațională.',
+        images: [
+          { src: 'https://erasmussfantulnicolae.b-cdn.net/img/home/12.jpeg', alt: 'Descriere imagine 1' },
+        ],
       },
       2022: {
-        title: "Educational Video for 2022",
-        description: "This video highlights the ongoing development of digital skills and educational strategies implemented in 2022.",
-        video: {
-          src: "/videos/video-2022.mp4",
-          title: "Videoclip Educational 2022",
-          isIframe: false,
-        },
+        title: 'Galerie Foto 2022',
+        description:
+          'Acest album de imagini evidențiază dezvoltarea continuă a competențelor digitale și strategiile educaționale implementate în 2022.',
+        images: [
+          { src: '/images/2022/image1.jpg', alt: 'Descriere imagine 1' },
+          { src: '/images/2022/image2.jpg', alt: 'Descriere imagine 2' },
+        ],
       },
     });
 

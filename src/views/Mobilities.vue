@@ -14,6 +14,7 @@
 
       <!-- Display Videos -->
       <div v-for="(video, index) in currentContent.videos" :key="'video-' + index" class="mb-8">
+        <h2 class="text-xl font-semibold mb-4">{{ video.title }}</h2>
         <iframe :src="video.src" :title="video.title" controls class="rounded-lg shadow-lg w-full h-[58vh] object-cover"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
@@ -98,6 +99,10 @@ export default defineComponent({
             src: "https://www.youtube.com/embed/qVpZ8mcCL18",
             title: "Robotics and STEAM Education 20222",
           },
+          {
+            src: "https://www.youtube.com/embed/vtYsyodtkWU",
+            title: "Prezentare mobilitate Cehia",
+          }
         ],
         documents: [
           {
