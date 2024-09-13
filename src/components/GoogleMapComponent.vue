@@ -26,13 +26,16 @@ export default defineComponent({
   components: { GoogleMap, Marker, Polyline, InfoWindow },
   setup() {
     const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-    const center = { lat: 50.1109, lng: 10.6821 }
+    const center = { lat: 48.1109, lng: 12.6821 }
 
     const institutions = [
       { name: "Szkoła Podstawowa Specjalna nr 327", location: { lat: 52.2165, lng: 20.9584 } },
       { name: "Speciální základní škola Poděbrady", location: { lat: 50.1445, lng: 15.0069 } },
       { name: "Csillagház Általános Iskola", location: { lat: 47.5822, lng: 19.0523 } },
       { name: "CP Rioturbio", location: { lat: 42.8747, lng: -5.6733 } },
+      { name: "Erasmus Learning Academy", location: { lat: 44.4977, lng: 11.3414 } },
+      { name: "Cappadocia Education", location: { lat: 41.0082, lng: 28.9784 } },
+      { name: "Executive Training Institute Malta", location: { lat: 35.9200, lng: 14.4891 } },
     ];
 
     const destinationSchool = { name: "Școala Gimnazială Specială Sfântul Nicolae", location: { lat: 44.4214, lng: 26.0828 } };
